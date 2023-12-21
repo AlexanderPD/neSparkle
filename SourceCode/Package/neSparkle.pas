@@ -221,6 +221,7 @@ type
     /// </summary>
     {$ENDREGION}
     procedure CheckUpdateWithoutUI;
+    procedure CheckUpdateWithoutUIandInstall;
 
     {$REGION 'Sets the application details.'}
     /// <summary>
@@ -482,6 +483,11 @@ end;
 procedure TneSparkle.CheckUpdateWithUIandInstall;
 begin
   ExecuteSimpleProcedure('win_sparkle_check_update_with_ui_and_install');
+end;
+
+procedure TneSparkle.CheckUpdateWithoutUIandInstall;
+begin
+  ExecuteSimpleProcedure('win_sparkle_check_update_without_ui_and_install');
 end;
 
 procedure TneSparkle.Cleanup;
